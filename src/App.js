@@ -1,13 +1,16 @@
 import React, {Component } from 'react';
-import WeatherLocation from './components/WeatherLocation';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import LocationList from './components/LocationList';
 import './App.css';
 
 class App extends Component { //definiendo nuevo componente,  la receta, la carpeta teiene el mismo nombre qu ela
   render() {//muestra la informacion de las funciones realizadas
     return (
-      <div className="App">
-        <WeatherLocation />
-      </div>
+      <MuiThemeProvider>
+        <div className="App">
+          <LocationList />
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
